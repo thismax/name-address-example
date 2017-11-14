@@ -9,7 +9,7 @@
 
 ## Installation
 
-- Checkout the project: `git clone http://github.apexclearing.local/jpetrarca/name-and-address.git`
+- Checkout the project: `git clone https://github.com/apexclearing/name-address-exercise.git`
 - Open `index.html` in your browser.
 
 ## Objective
