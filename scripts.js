@@ -1,7 +1,7 @@
-const combineNamesAndAddresses = (namesList, addressesList) => {
-  const namesAndAddresses = _.map(namesList, nameEntry => {
-    let matchingAddress = _.find(addressesList, { id: nameEntry.id });
-    return _.extend(nameEntry, matchingAddress);
+const combineNamesAndAddresses = (names, addresses) => {
+  const namesAndAddresses = _.map(names, name => {
+    let matchingAddress = _.find(addresses, { id: name.id });
+    return _.extend(name, matchingAddress);
   });
   console.log(namesAndAddresses);
 };
