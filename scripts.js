@@ -1,14 +1,9 @@
-// import lodash, names, addresses
-const _ = require('lodash');
-const names = require('./names');
-const addresses = require('./addresses');
-
 const combineNamesAndAddresses = (namesList, addressesList) => {
-  // initialize namesAndAddresses array
-  // iterate through namesList
-  // find object in addressesList that matches current namesList object id property
-  // extend current names object with matching address object
-  // log/return namesAndAdresses
+  const namesAndAddresses = _.map(namesList, nameEntry => {
+    let matchingAddress = _.find(addressesList, { id: nameEntry.id });
+    return _.extend(nameEntry, matchingAddress);
+  });
+  console.log(namesAndAddresses);
 };
 
-// call combineNamesAndAddresses
+combineNamesAndAddresses(namesList, addressesList);
